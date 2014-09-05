@@ -1,0 +1,1 @@
+bin\SpotifyPlaces.Web.dll
