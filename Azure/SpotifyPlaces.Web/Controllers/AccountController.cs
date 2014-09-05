@@ -1,15 +1,4 @@
-﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="AccountController.cs" company="">
-//   
-// </copyright>
-// <summary>
-//   Defines the AccountController type.
-// </summary>
-// --------------------------------------------------------------------------------------------------------------------
-
-using System.Web.Mvc;
-
-namespace SpotifyPlaces.Web.Controllers
+﻿namespace SpotifyPlaces.Web.Controllers
 {
     using System;
     using System.Collections.Generic;
@@ -17,6 +6,7 @@ namespace SpotifyPlaces.Web.Controllers
     using System.Net.Http;
     using System.Net.Http.Headers;
     using System.Text;
+    using System.Web.Mvc;
 
     using MongoDB.Driver;
 
@@ -26,7 +16,7 @@ namespace SpotifyPlaces.Web.Controllers
 
     public class AccountController : Controller
     {
-        private static IDictionary<string, string> RefreshTokens = new Dictionary<string, string>();
+        #region Fields
 
         private string CLIENT_ID = "fe1be8418a89472fbb775a1feed4c4cc";
 
@@ -37,6 +27,8 @@ namespace SpotifyPlaces.Web.Controllers
         private Uri SPOTIFY_ACCOUNTS_ENDPOINT = new Uri("https://accounts.spotify.com");
 
         private Uri SPOTIFY_API_ENDPOINT = new Uri("https://api.spotify.com");
+
+        #endregion
 
         [HttpPost]
         public ActionResult Swap(string code)
@@ -75,6 +67,7 @@ namespace SpotifyPlaces.Web.Controllers
             var userDto = new UserMongoDbDto();
             userDto.Id = user.Uri;
             userDto.Name = userDto.Id;
+            userDto.AccessToken = accessToken;
             userDto.RefreshToken = refreshToken;
             users.Save(userDto);
 
@@ -98,7 +91,7 @@ namespace SpotifyPlaces.Web.Controllers
             var parameters = new Dictionary<string, string>();
             parameters.Add("grant_type", "refresh_token");
 
-            string refreshToken = RefreshTokens[id];
+            string refreshToken = ""; // TODO: Get refresh token from DB
             parameters.Add("refresh_token", refreshToken);
 
             var data = JsonConvert.SerializeObject(parameters);

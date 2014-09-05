@@ -235,11 +235,13 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PlacesController.cs" />
     <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Dto\GooglePlaceDetailsResponseDto.cs" />
     <Compile Include="Dto\GooglePlacesGeometryDto.cs" />
     <Compile Include="Dto\GooglePlacesLocationDto.cs" />
     <Compile Include="Dto\GooglePlacesResponseDto.cs" />
     <Compile Include="Dto\GooglePlacesResultItemDto.cs" />
     <Compile Include="Dto\PlaceDto.cs" />
+    <Compile Include="Dto\PlaceMongoDbDto.cs" />
     <Compile Include="Dto\PlaylistDto.cs" />
     <Compile Include="Dto\PlaylistItemDto.cs" />
     <Compile Include="Dto\SpotifyUserDto.cs" />
@@ -312,7 +314,6 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Views\Account\" />
   </ItemGroup>
   <ItemGroup>

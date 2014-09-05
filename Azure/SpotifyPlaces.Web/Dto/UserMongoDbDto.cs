@@ -15,5 +15,8 @@
 
         [BsonElement("refreshToken")]
         public string RefreshToken { get; set; }
+
+        [BsonElement("accessToken")]
+        public string AccessToken { get; set; }
     }
 }

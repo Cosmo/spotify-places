@@ -21,5 +21,11 @@
 
         [JsonProperty(PropertyName = "score")]
         public int Score { get; set; }
+
+        [JsonProperty(PropertyName = "placesEnabled")]
+        public bool PlacesEnabled { get; set; }
+
+        [JsonProperty(PropertyName = "people")]
+        public string[] People { get; set; }
     }
 }

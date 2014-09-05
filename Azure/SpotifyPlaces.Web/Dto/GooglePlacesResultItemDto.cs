@@ -4,8 +4,8 @@
 
     public class GooglePlacesResultItemDto
     {
-        [JsonProperty(PropertyName = "id")]
-        public string Id { get; set; }
+        [JsonProperty(PropertyName = "place_id")]
+        public string PlaceId { get; set; }
 
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
