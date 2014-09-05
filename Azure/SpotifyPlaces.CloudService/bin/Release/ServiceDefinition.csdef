@@ -25,7 +25,7 @@
     </Imports>
     <Contents>
       <Content destination=".\">
-        <SourceDirectory path="C:\Projects\SpotifyPlaces\SpotifyPlaces.CloudService\rcf\Release\SpotifyPlaces.WebContent\" />
+        <SourceDirectory path="C:\Projects\SpotifyPlaces\Azure\SpotifyPlaces.CloudService\rcf\Release\SpotifyPlaces.WebContent\" />
       </Content>
     </Contents>
   </WebRole>

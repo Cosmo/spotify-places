@@ -71,6 +71,7 @@ namespace SpotifyPlaces.Web.Controllers
             return result;
         }
 
+        [HttpPost]
         public ActionResult Refresh(string id)
         {
             // Request a new access token using the POST:ed access token

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SpotifyPlaces.CloudService" generation="1" functional="0" release="0" Id="6ae153ac-d514-4261-8263-5693970e151f" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
+<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SpotifyPlaces.CloudService" generation="1" functional="0" release="0" Id="c21f667a-753a-4700-b29a-d898a662b645" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
   <groups>
     <group name="SpotifyPlaces.CloudServiceGroup" generation="1" functional="0" release="0">
       <componentports>
@@ -42,7 +42,7 @@
       </maps>
       <components>
         <groupHascomponents>
-          <role name="SpotifyPlaces.Web" generation="1" functional="0" release="0" software="C:\Projects\SpotifyPlaces\SpotifyPlaces.CloudService\csx\Release\roles\SpotifyPlaces.Web" entryPoint="base\x64\WaHostBootstrapper.exe" parameters="base\x64\WaIISHost.exe " memIndex="1792" hostingEnvironment="frontendadmin" hostingEnvironmentVersion="2">
+          <role name="SpotifyPlaces.Web" generation="1" functional="0" release="0" software="C:\Projects\SpotifyPlaces\Azure\SpotifyPlaces.CloudService\csx\Release\roles\SpotifyPlaces.Web" entryPoint="base\x64\WaHostBootstrapper.exe" parameters="base\x64\WaIISHost.exe " memIndex="1792" hostingEnvironment="frontendadmin" hostingEnvironmentVersion="2">
             <componentports>
               <inPort name="Endpoint1" protocol="http" portRanges="80" />
             </componentports>
@@ -70,9 +70,9 @@
     </group>
   </groups>
   <implements>
-    <implementation Id="b1d35d19-a5ad-48ab-8af8-f2dd3056d524" ref="Microsoft.RedDog.Contract\ServiceContract\SpotifyPlaces.CloudServiceContract@ServiceDefinition">
+    <implementation Id="7d09f73e-fdaa-487a-ae42-a5de52bab9e2" ref="Microsoft.RedDog.Contract\ServiceContract\SpotifyPlaces.CloudServiceContract@ServiceDefinition">
       <interfacereferences>
-        <interfaceReference Id="3992534e-ae4f-41a3-837f-21270c53f1da" ref="Microsoft.RedDog.Contract\Interface\SpotifyPlaces.Web:Endpoint1@ServiceDefinition">
+        <interfaceReference Id="f939a800-2082-41d5-b421-d2e43a6ae967" ref="Microsoft.RedDog.Contract\Interface\SpotifyPlaces.Web:Endpoint1@ServiceDefinition">
           <inPort>
             <inPortMoniker name="/SpotifyPlaces.CloudService/SpotifyPlaces.CloudServiceGroup/SpotifyPlaces.Web:Endpoint1" />
           </inPort>
