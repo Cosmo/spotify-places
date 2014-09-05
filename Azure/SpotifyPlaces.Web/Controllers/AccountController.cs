@@ -73,7 +73,8 @@ namespace SpotifyPlaces.Web.Controllers
             var user = this.GetSpotifyUser(accessToken);
 
             var userDto = new UserMongoDbDto();
-            userDto.Id = user.Id;
+            userDto.Id = user.Uri;
+            userDto.Name = userDto.Id;
             userDto.RefreshToken = refreshToken;
             users.Save(userDto);
 

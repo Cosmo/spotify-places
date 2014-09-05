@@ -184,6 +184,8 @@ C:\Projects\SpotifyPlaces\Azure\SpotifyPlaces.CloudService\obj\Debug\SpotifyPlac
 C:\Projects\SpotifyPlaces\Azure\SpotifyPlaces.CloudService\obj\Debug\SpotifyPlaces.Web\bin\NReco.Recommender.Data.dll
 C:\Projects\SpotifyPlaces\Azure\SpotifyPlaces.CloudService\obj\Debug\SpotifyPlaces.Web\bin\NReco.Recommender.dll
 C:\Projects\SpotifyPlaces\Azure\SpotifyPlaces.CloudService\obj\Debug\SpotifyPlaces.Web\bin\Owin.dll
+C:\Projects\SpotifyPlaces\Azure\SpotifyPlaces.CloudService\obj\Debug\SpotifyPlaces.Web\bin\PusherServer.dll
+C:\Projects\SpotifyPlaces\Azure\SpotifyPlaces.CloudService\obj\Debug\SpotifyPlaces.Web\bin\RestSharp.dll
 C:\Projects\SpotifyPlaces\Azure\SpotifyPlaces.CloudService\obj\Debug\SpotifyPlaces.Web\bin\ru\Microsoft.Data.Edm.resources.dll
 C:\Projects\SpotifyPlaces\Azure\SpotifyPlaces.CloudService\obj\Debug\SpotifyPlaces.Web\bin\ru\Microsoft.Data.OData.resources.dll
 C:\Projects\SpotifyPlaces\Azure\SpotifyPlaces.CloudService\obj\Debug\SpotifyPlaces.Web\bin\ru\Microsoft.Data.Services.Client.resources.dll
