@@ -7,6 +7,10 @@ Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "SpotifyPlaces.CloudService"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpotifyPlaces.Web", "SpotifyPlaces.Web\SpotifyPlaces.Web.csproj", "{999DBBDB-1E33-48A4-ABC4-9C7D3604BAD8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpotifyPlaces.Recommendations", "SpotifyPlaces.Recommendations\SpotifyPlaces.Recommendations.csproj", "{CF3020C4-3608-4D6E-A1C0-A954C16A4E70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpotifyPlaces.Recommendations.Tests", "SpotifyPlaces.Recommendations.Tests\SpotifyPlaces.Recommendations.Tests.csproj", "{0B77CFC0-7D3F-49C8-92B5-70026703B1A0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{999DBBDB-1E33-48A4-ABC4-9C7D3604BAD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{999DBBDB-1E33-48A4-ABC4-9C7D3604BAD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{999DBBDB-1E33-48A4-ABC4-9C7D3604BAD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF3020C4-3608-4D6E-A1C0-A954C16A4E70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF3020C4-3608-4D6E-A1C0-A954C16A4E70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF3020C4-3608-4D6E-A1C0-A954C16A4E70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF3020C4-3608-4D6E-A1C0-A954C16A4E70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B77CFC0-7D3F-49C8-92B5-70026703B1A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B77CFC0-7D3F-49C8-92B5-70026703B1A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B77CFC0-7D3F-49C8-92B5-70026703B1A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B77CFC0-7D3F-49C8-92B5-70026703B1A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

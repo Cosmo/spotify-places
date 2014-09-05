@@ -23,10 +23,5 @@
     <Imports>
       <Import moduleName="Diagnostics" />
     </Imports>
-    <Contents>
-      <Content destination=".\">
-        <SourceDirectory path="C:\Projects\SpotifyPlaces\SpotifyPlaces.CloudService\rcf\Debug\SpotifyPlaces.WebContent\" />
-      </Content>
-    </Contents>
   </WebRole>
 </ServiceDefinition>

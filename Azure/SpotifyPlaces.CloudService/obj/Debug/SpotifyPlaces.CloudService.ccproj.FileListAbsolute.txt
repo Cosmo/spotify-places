@@ -108,3 +108,5 @@ C:\Projects\SpotifyPlaces\SpotifyPlaces.CloudService\obj\Debug\SpotifyPlaces.Web
 C:\Projects\SpotifyPlaces\SpotifyPlaces.CloudService\obj\Debug\SpotifyPlaces.Web\bin\zh-Hant\Microsoft.Data.OData.resources.dll
 C:\Projects\SpotifyPlaces\SpotifyPlaces.CloudService\obj\Debug\SpotifyPlaces.Web\bin\zh-Hant\Microsoft.Data.Services.Client.resources.dll
 C:\Projects\SpotifyPlaces\SpotifyPlaces.CloudService\obj\Debug\SpotifyPlaces.Web\bin\zh-Hant\System.Spatial.resources.dll
+C:\Projects\SpotifyPlaces\Azure\SpotifyPlaces.CloudService\bin\Debug\ServiceConfiguration.cscfg
+C:\Projects\SpotifyPlaces\Azure\SpotifyPlaces.CloudService\bin\Debug\ServiceDefinition.csdef
