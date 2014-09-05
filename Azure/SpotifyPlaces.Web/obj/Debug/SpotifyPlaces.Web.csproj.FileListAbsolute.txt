@@ -219,3 +219,7 @@ C:\Projects\SpotifyPlaces\Azure\SpotifyPlaces.Web\obj\Debug\SpotifyPlaces.Web.dl
 C:\Projects\SpotifyPlaces\Azure\SpotifyPlaces.Web\obj\Debug\SpotifyPlaces.Web.pdb
 C:\Projects\SpotifyPlaces\Azure\SpotifyPlaces.Web\bin\SpotifyPlaces.Recommendations.dll
 C:\Projects\SpotifyPlaces\Azure\SpotifyPlaces.Web\bin\SpotifyPlaces.Recommendations.pdb
+C:\Projects\SpotifyPlaces\Azure\SpotifyPlaces.Web\bin\MongoDB.Bson.dll
+C:\Projects\SpotifyPlaces\Azure\SpotifyPlaces.Web\bin\MongoDB.Driver.dll
+C:\Projects\SpotifyPlaces\Azure\SpotifyPlaces.Web\bin\MongoDB.Bson.xml
+C:\Projects\SpotifyPlaces\Azure\SpotifyPlaces.Web\bin\MongoDB.Driver.xml

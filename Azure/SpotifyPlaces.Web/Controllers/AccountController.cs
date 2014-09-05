@@ -14,19 +14,25 @@ namespace SpotifyPlaces.Web.Controllers
     using System;
     using System.Collections.Generic;
     using System.Net;
+    using System.Net.Http;
+    using System.Net.Http.Headers;
     using System.Text;
+
+    using MongoDB.Driver;
 
     using Newtonsoft.Json;
 
+    using SpotifyPlaces.Web.Dto;
+
     public class AccountController : Controller
     {
-        private static IDictionary<string, string> RefreshTokens = new Dictionary<string, string>(); 
+        private static IDictionary<string, string> RefreshTokens = new Dictionary<string, string>();
 
-        private string CLIENT_ID = "e6695c6d22214e0f832006889566df9c";
+        private string CLIENT_ID = "fe1be8418a89472fbb775a1feed4c4cc";
 
-        private string CLIENT_SECRET = "29eb02041ba646179a1189dccac112c7";
+        private string CLIENT_SECRET = "e6044981fa9a48479792fc8a221abbe9";
 
-        private string CLIENT_CALLBACK_URL = "spotifyiossdkexample://";
+        private string CLIENT_CALLBACK_URL = "spotify-places://callback";
 
         private Uri SPOTIFY_ACCOUNTS_ENDPOINT = new Uri("https://accounts.spotify.com");
 
@@ -40,35 +46,41 @@ namespace SpotifyPlaces.Web.Controllers
             // URL to get an OAuth token from the Spotify Auth Service,
             // which it will pass back to the caller in a JSON payload.
 
-            string auth_code = code;
-
-            string AUTH_HEADER = "Basic " + Convert.ToBase64String(Encoding.UTF8.GetBytes(CLIENT_ID + ":" + CLIENT_SECRET));
-
-            var client = new WebClient();
+            var connectionString = "mongodb://spotifyplaces:jAwrwkIRI2cV0LMRj2E6A9O4oNPqL.kfZnS.cC9q.MA-@ds045077.mongolab.com:45077/spotifyplaces";
+            var database = MongoDatabase.Create(connectionString);
+            var users = database.GetCollection<UserMongoDbDto>("users");
 
             var parameters = new Dictionary<string, string>();
             parameters.Add("grant_type", "authorization_code");
             parameters.Add("redirect_uri", CLIENT_CALLBACK_URL);
-            parameters.Add("code", auth_code);
+            parameters.Add("code", code);
+            parameters.Add("client_id", CLIENT_ID);
+            parameters.Add("client_secret", CLIENT_SECRET);
 
-            var data = JsonConvert.SerializeObject(parameters);
-            client.Headers.Add("Authorization", AUTH_HEADER);
-            var response = client.UploadString(new Uri(this.SPOTIFY_ACCOUNTS_ENDPOINT, "/api/token"), data);
+            var client = new HttpClient();
+            var base64Auth = Convert.ToBase64String(Encoding.UTF8.GetBytes(CLIENT_ID + ":" + CLIENT_SECRET));
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", base64Auth);
+            client.BaseAddress = this.SPOTIFY_ACCOUNTS_ENDPOINT;
+            var content = new FormUrlEncodedContent(parameters);
+            var result = client.PostAsync("/api/token", content).Result;
+            var response = result.Content.ReadAsStringAsync().Result;
 
             var token_data = JsonConvert.DeserializeObject<Dictionary<string, string>>(response);
 
             var accessToken = token_data["access_token"];
             var refreshToken = token_data["refresh_token"];
 
-            var profile = this.GetProfileData(accessToken);
-            var id = profile["id"];
+            var user = this.GetSpotifyUser(accessToken);
 
-            RefreshTokens.Add(new KeyValuePair<string, string>(id, refreshToken));
+            var userDto = new UserMongoDbDto();
+            userDto.Id = user.Id;
+            userDto.RefreshToken = refreshToken;
+            users.Save(userDto);
 
-            var result = new ContentResult();
-            result.Content = response;
+            var contentResult = new ContentResult();
+            contentResult.Content = response;
 
-            return result;
+            return contentResult;
         }
 
         [HttpPost]
@@ -98,13 +110,13 @@ namespace SpotifyPlaces.Web.Controllers
             return result;
         }
 
-        private IDictionary<string, string> GetProfileData(string accessToken)
+        private SpotifyUserDto GetSpotifyUser(string accessToken)
         {
             var client = new WebClient();
             client.Headers.Add("Authorization", "Bearer " + accessToken);
             var json = client.DownloadString(new Uri(SPOTIFY_API_ENDPOINT, "/v1/me"));
 
-            return JsonConvert.DeserializeObject<Dictionary<string, string>>(json);
+            return JsonConvert.DeserializeObject<SpotifyUserDto>(json);
         } 
     }
 }

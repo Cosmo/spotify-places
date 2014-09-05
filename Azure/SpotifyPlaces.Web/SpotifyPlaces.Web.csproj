@@ -61,6 +61,12 @@
     <Reference Include="Microsoft.WindowsAzure.Storage, Version=3.0.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\WindowsAzure.Storage.3.0.3.0\lib\net40\Microsoft.WindowsAzure.Storage.dll</HintPath>
     </Reference>
+    <Reference Include="MongoDB.Bson">
+      <HintPath>..\packages\mongocsharpdriver.1.9.2\lib\net35\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>..\packages\mongocsharpdriver.1.9.2\lib\net35\MongoDB.Driver.dll</HintPath>
+    </Reference>
     <Reference Include="NI.Data">
       <HintPath>..\assemblies\NI.Data.dll</HintPath>
     </Reference>
@@ -69,6 +75,12 @@
     </Reference>
     <Reference Include="NReco.Recommender.Data">
       <HintPath>..\assemblies\NReco.Recommender.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="PusherServer">
+      <HintPath>..\packages\PusherServer.2.0.0-beta-4\lib\net35\PusherServer.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp">
+      <HintPath>..\packages\RestSharp.104.1\lib\net4\RestSharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -230,6 +242,8 @@
     <Compile Include="Dto\PlaceDto.cs" />
     <Compile Include="Dto\PlaylistDto.cs" />
     <Compile Include="Dto\PlaylistItemDto.cs" />
+    <Compile Include="Dto\SpotifyUserDto.cs" />
+    <Compile Include="Dto\UserMongoDbDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

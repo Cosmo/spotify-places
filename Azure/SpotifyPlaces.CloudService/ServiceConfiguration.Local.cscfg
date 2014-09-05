@@ -4,6 +4,14 @@
     <Instances count="1" />
     <ConfigurationSettings>
       <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="spotifyplaces" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBpQYJKoZIhvcNAQcDoIIBljCCAZICAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEBvGMESOXMa/QKF3MquEbLYwDQYJKoZIhvcNAQEBBQAEggEAZlxuu1l+m2kTAAAGAC668JXhcOipat3G7jVnfdvyc2GeFVZofCeJ1IJdH6Hqwf8Vcrmcf5NBbyGMIvazvq2l1TkUyrga0R1f/lvBx5J9cjqR6wHVpjR7tiiaKGk0dGI/QXoovHRePWQUiftYe5AziEmvigLt9kR8mjq44lfqEyL3//1S21bKewwkQEns2XCUS2ajXCzSctgG1Ua4M4LZENRdPY5ivVLYThzwzji6lWmzy0Svx0f08jz1kapZXB/FAUsgDAYcXUF7JCbxF9oMUBXQ9/JXedXSOfqNlrReMNt/xbOop9OJthGx48QFECxjstpaVusbfP0Shfo0ECbQ0zA7BgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECD7g+5lbo2VNgBhU8xnD3YtqFDWyVxbpSOvFzPb69NTNQac=" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2099-09-05T23:59:59.0000000+02:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
     </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="801FB8930921808E6EE345910F8843C411DBD602" thumbprintAlgorithm="sha1" />
+    </Certificates>
   </Role>
 </ServiceConfiguration>
