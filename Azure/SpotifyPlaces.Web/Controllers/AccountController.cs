@@ -66,7 +66,7 @@
 
             var userDto = new UserMongoDbDto();
             userDto.Id = user.Uri;
-            userDto.Name = userDto.Id;
+            userDto.Name = user.Id;
             userDto.AccessToken = accessToken;
             userDto.RefreshToken = refreshToken;
             users.Save(userDto);

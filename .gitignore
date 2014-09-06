@@ -1,0 +1,6 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Azure/SpotifyPlaces.Recommendations/bin
+/Azure/SpotifyPlaces.Recommendations/obj

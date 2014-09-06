@@ -132,7 +132,6 @@ C:\Projects\SpotifyPlaces\Azure\SpotifyPlaces.Web\bin\NI.Data.dll
 C:\Projects\SpotifyPlaces\Azure\SpotifyPlaces.Web\bin\NReco.Recommender.Data.dll
 C:\Projects\SpotifyPlaces\Azure\SpotifyPlaces.Web\bin\NReco.Recommender.dll
 C:\Projects\SpotifyPlaces\Azure\SpotifyPlaces.Web\bin\Owin.dll
-C:\Projects\SpotifyPlaces\Azure\SpotifyPlaces.Web\bin\SpotifyPlaces.Recommendations.dll
 C:\Projects\SpotifyPlaces\Azure\SpotifyPlaces.Web\bin\System.Net.Http.Formatting.dll
 C:\Projects\SpotifyPlaces\Azure\SpotifyPlaces.Web\bin\System.Spatial.dll
 C:\Projects\SpotifyPlaces\Azure\SpotifyPlaces.Web\bin\System.Web.Helpers.dll
@@ -147,7 +146,6 @@ C:\Projects\SpotifyPlaces\Azure\SpotifyPlaces.Web\bin\System.Web.WebPages.dll
 C:\Projects\SpotifyPlaces\Azure\SpotifyPlaces.Web\bin\System.Web.WebPages.Razor.dll
 C:\Projects\SpotifyPlaces\Azure\SpotifyPlaces.Web\bin\WebGrease.dll
 C:\Projects\SpotifyPlaces\Azure\SpotifyPlaces.Web\bin\Microsoft.WindowsAzure.Diagnostics.StorageUtility.dll
-C:\Projects\SpotifyPlaces\Azure\SpotifyPlaces.Web\bin\SpotifyPlaces.Recommendations.pdb
 C:\Projects\SpotifyPlaces\Azure\SpotifyPlaces.Web\bin\Microsoft.Data.Edm.xml
 C:\Projects\SpotifyPlaces\Azure\SpotifyPlaces.Web\bin\Microsoft.Data.OData.xml
 C:\Projects\SpotifyPlaces\Azure\SpotifyPlaces.Web\bin\Microsoft.Data.Services.Client.xml
@@ -218,3 +216,11 @@ C:\Projects\SpotifyPlaces\Azure\SpotifyPlaces.Web\bin\zh-Hant\System.Spatial.res
 C:\Projects\SpotifyPlaces\Azure\SpotifyPlaces.Web\obj\Release\SpotifyPlaces.Web.csprojResolveAssemblyReference.cache
 C:\Projects\SpotifyPlaces\Azure\SpotifyPlaces.Web\obj\Release\SpotifyPlaces.Web.dll
 C:\Projects\SpotifyPlaces\Azure\SpotifyPlaces.Web\obj\Release\SpotifyPlaces.Web.pdb
+C:\Projects\SpotifyPlaces\Azure\SpotifyPlaces.Web\bin\MongoDB.Bson.dll
+C:\Projects\SpotifyPlaces\Azure\SpotifyPlaces.Web\bin\MongoDB.Driver.dll
+C:\Projects\SpotifyPlaces\Azure\SpotifyPlaces.Web\bin\PusherServer.dll
+C:\Projects\SpotifyPlaces\Azure\SpotifyPlaces.Web\bin\RestSharp.dll
+C:\Projects\SpotifyPlaces\Azure\SpotifyPlaces.Web\bin\MongoDB.Bson.xml
+C:\Projects\SpotifyPlaces\Azure\SpotifyPlaces.Web\bin\MongoDB.Driver.xml
+C:\Projects\SpotifyPlaces\Azure\SpotifyPlaces.Web\bin\PusherServer.xml
+C:\Projects\SpotifyPlaces\Azure\SpotifyPlaces.Web\bin\RestSharp.xml

@@ -233,6 +233,7 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PlaceController.cs" />
     <Compile Include="Controllers\PlacesController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Dto\GooglePlaceDetailsResponseDto.cs" />
@@ -244,7 +245,17 @@
     <Compile Include="Dto\PlaceMongoDbDto.cs" />
     <Compile Include="Dto\PlaylistDto.cs" />
     <Compile Include="Dto\PlaylistItemDto.cs" />
+    <Compile Include="Dto\SpotifyAlbumDto.cs" />
+    <Compile Include="Dto\SpotifyArtistDto.cs" />
+    <Compile Include="Dto\SpotifyImageDto.cs" />
+    <Compile Include="Dto\SpotifyTrackDto.cs" />
+    <Compile Include="Dto\SpotifyTracksDto.cs" />
     <Compile Include="Dto\SpotifyUserDto.cs" />
+    <Compile Include="Dto\SpotifyUserPlaylistDto.cs" />
+    <Compile Include="Dto\SpotifyUserPlaylistsDto.cs" />
+    <Compile Include="Dto\SpotifyUserTrackDto.cs" />
+    <Compile Include="Dto\SpotifyUserTracksDto.cs" />
+    <Compile Include="Dto\TrackMongoDbDto.cs" />
     <Compile Include="Dto\UserMongoDbDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -261,7 +272,6 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\logo.png" />
-    <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.js" />
@@ -321,13 +331,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
-    <None Include="Project_Readme.html" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SpotifyPlaces.Recommendations\SpotifyPlaces.Recommendations.csproj">
-      <Project>{cf3020c4-3608-4d6e-a1c0-a954c16a4e70}</Project>
-      <Name>SpotifyPlaces.Recommendations</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

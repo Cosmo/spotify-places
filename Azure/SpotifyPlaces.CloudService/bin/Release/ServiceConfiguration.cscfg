@@ -13,6 +13,19 @@
     <Instances count="1" />
     <ConfigurationSettings>
       <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=tivipeek;AccountKey=/hYlb2WADEOi+ciHntPtDkubQ5VdSZuCRTF5RcxNLOKdzDb+nsBMkeZa3ozDMNjEc12w2N8EXhUOIPc3Z9SVuQ==" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="spotifyplaces" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBpQYJKoZIhvcNAQcDoIIBljCCAZICAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEDWwapZfVDmLTiSONJ5k1K4wDQYJKoZIhvcNAQEBBQAEggEAwOj6YmwPBKwuz3JcDmCCaONUwSuzLO7X5V5UCZMAKNy9fZ8w6RXq2MoPFX3snB7hcGRrBY4Fm1D/RLrhKkISZlfJU/VSNqHgJAXXSFm2qV9+xQ+ZglJtzklKjlguf13x/XCTnGEDG0lt71/qR9e2cMLrmTsGACOxj/855kUx7AIEIpD8q8XWX0LmkONzXDBGmdzdld259VG2ts5lrNuutnIdQsgfNE7/cEenZL1Z32L748tChCt/LujIbfqDxQAiXsBctslmQm5HRRvpvVMQFSZFW5JTxSA4pkrdkZhgIv8ekEImTxMnICENCNvdL88kpakvX07v6w9EVRU5JZXKHzA7BgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECN8N59e58sDlgBi1qSPvzX31KUrpgvQyPA9U1LnfCvUyR54=" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2099-09-06T23:59:59.0000000+02:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteDebugger.Connector.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteDebugger.Connector.Version" value="2.3" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteDebugger.ClientThumbprint" value="A2AB2BC22C1991B1B7F7B6DEC69E1104964250D0" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteDebugger.ServerThumbprint" value="A2AB2BC22C1991B1B7F7B6DEC69E1104964250D0" />
     </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="1321F6013B6A2DFE73B548B41BCFD8E6ED9E0F3F" thumbprintAlgorithm="sha1" />
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteDebugger.TransportValidation" thumbprint="A2AB2BC22C1991B1B7F7B6DEC69E1104964250D0" thumbprintAlgorithm="sha1" />
+    </Certificates>
   </Role>
 </ServiceConfiguration>

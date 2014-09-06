@@ -12,6 +12,7 @@
     <AssemblyName>SpotifyPlaces.CloudService</AssemblyName>
     <StartDevelopmentStorage>True</StartDevelopmentStorage>
     <Name>SpotifyPlaces.CloudService</Name>
+    <PackageEnableRemoteDebugger>True</PackageEnableRemoteDebugger>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

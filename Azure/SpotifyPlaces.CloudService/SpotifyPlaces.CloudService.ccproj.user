@@ -2,5 +2,9 @@
 <Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ActivePublishProfile>spotifyplacesProduction</ActivePublishProfile>
+    <RemoteDesktopMoreOptions>False</RemoteDesktopMoreOptions>
+    <PackageProfile>Cloud</PackageProfile>
+    <PackageSolutionConfiguration>Debug</PackageSolutionConfiguration>
+    <PackageEnableRemoteDesktop>True</PackageEnableRemoteDesktop>
   </PropertyGroup>
 </Project>

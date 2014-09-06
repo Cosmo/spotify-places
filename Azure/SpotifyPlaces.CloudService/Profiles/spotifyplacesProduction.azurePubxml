@@ -11,7 +11,7 @@
     <AzureFallbackToDeleteAndRecreateIfUpgradeFails>False</AzureFallbackToDeleteAndRecreateIfUpgradeFails>
     <AzureHostedServiceLabel>spotifyplaces</AzureHostedServiceLabel>
     <AzureHostedServiceName>spotifyplaces</AzureHostedServiceName>
-    <AzureEnableIntelliTrace>True</AzureEnableIntelliTrace>
+    <AzureEnableIntelliTrace>False</AzureEnableIntelliTrace>
     <AzureEnableProfiling>False</AzureEnableProfiling>
     <AzureServiceConfiguration>Cloud</AzureServiceConfiguration>
     <AzureSolutionConfiguration>Debug</AzureSolutionConfiguration>

@@ -18,5 +18,8 @@
 
         [BsonElement("accessToken")]
         public string AccessToken { get; set; }
+
+        [BsonElement("tracks")]
+        public TrackMongoDbDto[] Tracks { get; set; }
     }
 }

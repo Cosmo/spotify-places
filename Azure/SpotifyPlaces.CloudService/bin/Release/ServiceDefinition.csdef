@@ -19,9 +19,24 @@
     </Sites>
     <Endpoints>
       <InputEndpoint name="Endpoint1" protocol="http" port="80" />
+      <InputEndpoint name="Microsoft.WindowsAzure.Plugins.WebDeploy.InputEndpoint" protocol="tcp" port="8172" localPort="8172" />
+      <InstanceInputEndpoint name="Microsoft.WindowsAzure.Plugins.RemoteDebugger.Connector" protocol="tcp" localPort="30398">
+        <AllocatePublicPortFrom>
+          <FixedPortRange min="30400" max="30424" />
+        </AllocatePublicPortFrom>
+      </InstanceInputEndpoint>
+      <InstanceInputEndpoint name="Microsoft.WindowsAzure.Plugins.RemoteDebugger.Forwarder" protocol="tcp" localPort="31398">
+        <AllocatePublicPortFrom>
+          <FixedPortRange min="31400" max="31424" />
+        </AllocatePublicPortFrom>
+      </InstanceInputEndpoint>
     </Endpoints>
     <Imports>
       <Import moduleName="Diagnostics" />
+      <Import moduleName="RemoteAccess" />
+      <Import moduleName="RemoteForwarder" />
+      <Import moduleName="WebDeploy" />
+      <Import moduleName="RemoteDebuggerConnector" />
     </Imports>
     <Contents>
       <Content destination=".\">

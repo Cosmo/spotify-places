@@ -13,6 +13,39 @@
         <Variable name="WaRoleType" value="IISWebRole" />
       </Environment>
     </Task>
+    <Task commandLine="RemoteAccessAgent.exe" executionContext="elevated" taskType="background" relativePath="plugins\RemoteAccess">
+      <Environment>
+        <Variable name="RdModuleName" value="RemoteAccess" />
+        <Variable name="WaRoleType" value="IISWebRole" />
+      </Environment>
+    </Task>
+    <Task commandLine="RemoteAccessAgent.exe /blockStartup" executionContext="elevated" relativePath="plugins\RemoteAccess">
+      <Environment>
+        <Variable name="RdModuleName" value="RemoteAccess" />
+        <Variable name="WaRoleType" value="IISWebRole" />
+      </Environment>
+    </Task>
+    <Task commandLine="install.cmd" executionContext="elevated" relativePath="plugins\RemoteForwarder">
+      <Environment>
+        <Variable name="IsEmulated">
+          <RoleInstanceValue xpath="/RoleEnvironment/Deployment/@emulated" />
+        </Variable>
+        <Variable name="RdModuleName" value="RemoteForwarder" />
+        <Variable name="WaRoleType" value="IISWebRole" />
+      </Environment>
+    </Task>
+    <Task commandLine="ConfigureIIS.cmd &gt; WebDeployConfig.log" executionContext="elevated" relativePath="plugins\WebDeploy">
+      <Environment>
+        <Variable name="RdModuleName" value="WebDeploy" />
+        <Variable name="WaRoleType" value="IISWebRole" />
+      </Environment>
+    </Task>
+    <Task commandLine="Connector\Microsoft.VisualStudio.WindowsAzure.RemoteDebugger.Connector.exe" executionContext="elevated" taskType="background" relativePath="plugins\RemoteDebuggerConnector">
+      <Environment>
+        <Variable name="RdModuleName" value="RemoteDebuggerConnector" />
+        <Variable name="WaRoleType" value="IISWebRole" />
+      </Environment>
+    </Task>
   </Startup>
   <Runtime>
     <EntryPoint>
@@ -21,6 +54,15 @@
   </Runtime>
   <ConfigurationSettings>
     <Setting name="ConnectionString" nameSpace="Microsoft.WindowsAzure.Plugins.Diagnostics" />
+    <Setting name="Enabled" nameSpace="Microsoft.WindowsAzure.Plugins.RemoteAccess" />
+    <Setting name="AccountUsername" nameSpace="Microsoft.WindowsAzure.Plugins.RemoteAccess" />
+    <Setting name="AccountEncryptedPassword" nameSpace="Microsoft.WindowsAzure.Plugins.RemoteAccess" />
+    <Setting name="AccountExpiration" nameSpace="Microsoft.WindowsAzure.Plugins.RemoteAccess" />
+    <Setting name="Enabled" nameSpace="Microsoft.WindowsAzure.Plugins.RemoteForwarder" />
+    <Setting name="Connector.Enabled" nameSpace="Microsoft.WindowsAzure.Plugins.RemoteDebugger" />
+    <Setting name="Connector.Version" nameSpace="Microsoft.WindowsAzure.Plugins.RemoteDebugger" />
+    <Setting name="ClientThumbprint" nameSpace="Microsoft.WindowsAzure.Plugins.RemoteDebugger" />
+    <Setting name="ServerThumbprint" nameSpace="Microsoft.WindowsAzure.Plugins.RemoteDebugger" />
   </ConfigurationSettings>
   <Properties>
     <Property name="TargetFrameworkVersion" value="v4.5" />
