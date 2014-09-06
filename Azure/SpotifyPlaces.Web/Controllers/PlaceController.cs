@@ -44,26 +44,16 @@ namespace SpotifyPlaces.Web.Controllers
             if (placeDto != null)
             {
                 dto.People = placeDto.People;
+                dto.Playlist = new PlaylistDto();
+                dto.Playlist.Items = placeDto.Playlist.Select(
+                    x => new PlaylistItemDto
+                             {
+                                 Title = x.Title,
+                                 CoverUrl = x.CoverUrl,
+                                 SpotifyId = x.SpotifyId,
+                                 Artist = x.Artist
+                             });
             }
-
-            var playlistDto = new PlaylistDto()
-            {
-                Items = new List<PlaylistItemDto>
-                    {
-                        new PlaylistItemDto { SpotifyId = Guid.NewGuid().ToString(), CoverUrl = "https://i.scdn.co/image/3854392c24eabbf76038b1d1fbe68034ddefe59e", Artist = "Artist 01", Title = "Song 01" },
-                        new PlaylistItemDto { SpotifyId = Guid.NewGuid().ToString(), CoverUrl = "https://i.scdn.co/image/3854392c24eabbf76038b1d1fbe68034ddefe59e", Artist = "Artist 02", Title = "Song 02" },
-                        new PlaylistItemDto { SpotifyId = Guid.NewGuid().ToString(), CoverUrl = "https://i.scdn.co/image/3854392c24eabbf76038b1d1fbe68034ddefe59e", Artist = "Artist 03", Title = "Song 03" },
-                        new PlaylistItemDto { SpotifyId = Guid.NewGuid().ToString(), CoverUrl = "https://i.scdn.co/image/3854392c24eabbf76038b1d1fbe68034ddefe59e", Artist = "Artist 04", Title = "Song 04" },
-                        new PlaylistItemDto { SpotifyId = Guid.NewGuid().ToString(), CoverUrl = "https://i.scdn.co/image/3854392c24eabbf76038b1d1fbe68034ddefe59e", Artist = "Artist 05", Title = "Song 05" },
-                        new PlaylistItemDto { SpotifyId = Guid.NewGuid().ToString(), CoverUrl = "https://i.scdn.co/image/3854392c24eabbf76038b1d1fbe68034ddefe59e", Artist = "Artist 06", Title = "Song 06" },
-                        new PlaylistItemDto { SpotifyId = Guid.NewGuid().ToString(), CoverUrl = "https://i.scdn.co/image/3854392c24eabbf76038b1d1fbe68034ddefe59e", Artist = "Artist 07", Title = "Song 07" },
-                        new PlaylistItemDto { SpotifyId = Guid.NewGuid().ToString(), CoverUrl = "https://i.scdn.co/image/3854392c24eabbf76038b1d1fbe68034ddefe59e", Artist = "Artist 08", Title = "Song 08" },
-                        new PlaylistItemDto { SpotifyId = Guid.NewGuid().ToString(), CoverUrl = "https://i.scdn.co/image/3854392c24eabbf76038b1d1fbe68034ddefe59e", Artist = "Artist 09", Title = "Song 09" },
-                        new PlaylistItemDto { SpotifyId = Guid.NewGuid().ToString(), CoverUrl = "https://i.scdn.co/image/3854392c24eabbf76038b1d1fbe68034ddefe59e", Artist = "Artist 10", Title = "Song 10" }
-                    }
-            };
-
-            dto.Playlist = playlistDto;
 
             return dto;
         }
@@ -85,7 +75,7 @@ namespace SpotifyPlaces.Web.Controllers
             }
             
             var people = new List<string>(placeDto.People);
-            if (people.Any(x => x != userId) && people.Any())
+            if (people.All(x => x != userId))
             {
                 people.Add(userId);
                 placeDto.People = people.ToArray();
@@ -152,10 +142,12 @@ namespace SpotifyPlaces.Web.Controllers
             var userTracks = spotifyUserTracks.Items.Select(
                 x =>
                     {
+                        var artist = x.Track.Artists != null ? x.Track.Artists.FirstOrDefault() : null;
+
                         var track = new TrackMongoDbDto();
                         track.Id = x.Track.Id;
                         track.Title = x.Track.Name;
-                        track.Artist = x.Track.Artist.Name;
+                        track.Artist = artist != null ? artist.Name : "Artist";
                         var image = x.Track.Album.Images.OrderByDescending(i => i.Height).FirstOrDefault();
                         if (image != null) track.CoverUrl = image.Url;
                         return track;
@@ -175,7 +167,7 @@ namespace SpotifyPlaces.Web.Controllers
             var allTracks = new List<TrackMongoDbDto>();
             foreach (var dto in userDtos)
             {
-                var tracks = this.GetUserTracks(dto.Name);
+                var tracks = this.GetUserTracks(dto.Id);
                 allTracks.AddRange(tracks);
             }
 

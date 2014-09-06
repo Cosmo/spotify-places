@@ -7,8 +7,8 @@ namespace SpotifyPlaces.Web.Dto
         [JsonProperty(PropertyName = "album")]
         public SpotifyAlbumDto Album { get; set; }
 
-        [JsonProperty(PropertyName = "artist")]
-        public SpotifyArtistDto Artist { get; set; }
+        [JsonProperty(PropertyName = "artists")]
+        public SpotifyArtistDto[] Artists { get; set; }
 
         [JsonProperty(PropertyName = "href")]
         public string Href { get; set; }
